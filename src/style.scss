@@ -1,0 +1,115 @@
+$white:#fff;
+$green:#44dfc4;
+#navlight{
+    opacity: 2000;
+    background-color: $white;
+    transition:all 1s ease-in-out;
+    .navbar-brand{
+        img{
+            height:7vh;
+            margin:2px auto;
+        }
+       
+    }
+    .navbar-nav{
+        margin-left: auto;
+        gap:20px 60px;
+        margin-right: 30px;
+    }
+    #menu{
+        margin-left:auto;
+        gap:10px 60px;
+        margin-right: 50px;
+    }
+    .nav-link.active{
+        color: $green;
+    }
+    #navbarres{
+        text-align: center;
+        overflow: hidden;
+        opacity: 2000;
+        height: 100%;
+        z-index: 1035;
+        .close-btn{
+            display: none;
+            color: $green;
+        }
+    }
+}
+.animate{
+    animation: mysecond 1s 1;
+}
+.flow{
+    overflow-y: hidden;
+}
+#loader{
+    height: 40vh;
+}
+.loader{
+    display: flex;
+    margin: 2px auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+@keyframes mysecond {
+    0%   {right: 0%; top: 0px;}
+     30%   {right: 0%; top: 0px;}
+    100% {right: -100%; top: 0px;}
+  }
+  .hero-section{
+      background-image: url('./b2.jpg');
+      height: 60vh;
+      background-position: center;
+      background-size: cover;
+  }
+  @media only screen and (max-width:992px){
+    .off{
+        position: fixed;
+        top: 0;
+        right:0%;
+        left: 10%;
+        padding: 80px 15px 15px 15px;
+        width: 90%!important;
+        height: 100%!important;
+        display: block!important;
+        background: #fff;
+        overflow-y: auto;
+        z-index: 1050;
+        text-align: center;
+        animation: myfirst .6s 1;
+ }
+ @keyframes myfirst {
+    0%   {left: 100%; top: 0px;}
+    30%   {left: 100%; top: 0px;}
+    100% {left: 10%; top: 0px;}
+  }
+    #navlight{
+        #navbarres{
+            position: fixed;
+            top: 0;
+            right: -100%;
+            padding: 80px 15px 15px 15px;
+            width: 90%!important;
+            height: 100%!important;
+            display: block!important;
+            background: #fff;
+            overflow-y: auto;
+            z-index: 1050;
+            .close-btn{
+                display: block;
+                font-size: 30px;
+                position: absolute;
+                top: 5px;
+                right:5%;
+                color: $green;
+            }
+           
+    }
+}
+}
+@media All and (max-width:768px){
+    #loader{
+        height:30vh;
+    }
+}
